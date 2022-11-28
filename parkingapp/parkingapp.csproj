@@ -48,4 +48,23 @@
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
 	</ItemGroup>
 
+	<ItemGroup>
+		<None Remove="Resources\Fonts\fa6-solid.otf" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="parkeerpagina.xaml.cs">
+	    <DependentUpon>parkeerpagina.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="parkeerpagina.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="parkingspagina.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
 </Project>
