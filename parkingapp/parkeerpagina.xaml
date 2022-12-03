@@ -8,5 +8,24 @@
             Text="Parkeer pagina"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+
+        <Border
+        	Stroke="LightGray"
+	        Background="White"
+	        StrokeThickness="2"
+	        Padding="30,20"
+	        HorizontalOptions="Center"
+            StrokeShape="RoundRectangle 15">
+
+            <VerticalStackLayout>
+                <Picker
+                    Title="Parking">
+                </Picker>
+                <Button
+                    Text="Parkeer">
+                    
+                </Button>
+            </VerticalStackLayout>
+        </Border>
     </VerticalStackLayout>
 </ContentPage>
