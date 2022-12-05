@@ -19,7 +19,8 @@
 
             <VerticalStackLayout>
                 <Picker
-                    Title="Parking">
+                    Title="Parking"
+                    ItemsSource="{{Binding parkingLijst}}">
                 </Picker>
                 <Button
                     Text="Parkeer">
