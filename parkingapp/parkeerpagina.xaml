@@ -17,14 +17,41 @@
 	        HorizontalOptions="Center"
             StrokeShape="RoundRectangle 15">
 
-            <VerticalStackLayout>
+            <VerticalStackLayout
+                WidthRequest="300"
+                HeightRequest="100"
+                Spacing="20">
                 <Picker
                     Title="Parking"
-                    ItemsSource="{{Binding parkingLijst}}">
+                    ItemsSource="{Binding parkings}"
+                    ItemDisplayBinding="{Binding name}"
+                    HorizontalOptions="Center">
                 </Picker>
                 <Button
-                    Text="Parkeer">
-                    
+                    Text="Parkeer"
+                    HorizontalOptions="Center">
+                </Button>
+            </VerticalStackLayout>
+        </Border>
+        <Border
+        	Stroke="LightGray"
+	        Background="White"
+	        StrokeThickness="2"
+	        Padding="30,20"
+	        HorizontalOptions="Center"
+            StrokeShape="RoundRectangle 15">
+
+            <VerticalStackLayout
+                WidthRequest="300"
+                HeightRequest="100"
+                Spacing="20">
+                <Label
+                    HorizontalOptions="Center">
+                    Geparkeerd in Parking 1
+                </Label>
+                <Button
+                    Text="Vertrek"
+                    HorizontalOptions="Center">
                 </Button>
             </VerticalStackLayout>
         </Border>
