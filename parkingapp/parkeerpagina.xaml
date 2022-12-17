@@ -23,13 +23,14 @@
                 Spacing="20">
                 <Picker
                     Title="Parking"
-                    ItemsSource="{Binding parkings}"
-                    ItemDisplayBinding="{Binding name}"
+                    ItemsSource="{Binding Parkings}"
+                    ItemDisplayBinding="{Binding capacity}"
                     HorizontalOptions="Center">
                 </Picker>
                 <Button
                     Text="Parkeer"
-                    HorizontalOptions="Center">
+                    HorizontalOptions="Center"
+                    Clicked="OnButtonClicked">
                 </Button>
             </VerticalStackLayout>
         </Border>
