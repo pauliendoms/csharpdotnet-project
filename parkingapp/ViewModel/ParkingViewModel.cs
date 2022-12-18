@@ -9,6 +9,7 @@ public class ParkingViewModel : INotifyPropertyChanged
 {
     public IDataStore DataStore => DependencyService.Get<IDataStore>();
     List<Parking> _parkings;
+    List<List<Parking>> _parkingsByCity;
 
     new public event PropertyChangedEventHandler PropertyChanged;
     new protected void OnPropertyChanged([CallerMemberName] string propertyName = "")
@@ -29,6 +30,16 @@ public class ParkingViewModel : INotifyPropertyChanged
         }
     }
 
+    public List<List<Parking>> ParkingsByCity
+    {
+        get { return _parkingsByCity; }
+        set
+        {
+            _parkingsByCity = value;
+            OnPropertyChanged();
+        }
+    }
+
     public ParkingViewModel()
     {
         GetParkings();
@@ -38,5 +49,11 @@ public class ParkingViewModel : INotifyPropertyChanged
     {
         _parkings = await DataStore.GetParkings();
         Console.WriteLine(_parkings[4].capacity);
+    }
+
+    public async void GetParkingsByStad()
+    {
+        _parkingsByCity = await DataStore.GetParkingsByStad();
+        Console.WriteLine(_parkingsByCity.Count());
     }
 }

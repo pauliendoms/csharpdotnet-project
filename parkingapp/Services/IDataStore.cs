@@ -12,5 +12,8 @@ namespace parkingapp.Services
         List<Parking> ParkingList { get; set; }
 
         Task<List<Parking>> GetParkings();
+        Task<List<List<Parking>>> GetParkingsByStad();
+        Task Parkeer(int pid);
+        Task Vertrek(int pid);
     }
 }

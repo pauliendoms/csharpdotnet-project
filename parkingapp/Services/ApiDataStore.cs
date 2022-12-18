@@ -23,5 +23,27 @@ namespace parkingapp.Services
 
             return JsonConvert.DeserializeObject<List<Parking>>(res);
         }
+
+        public async Task<List<List<Parking>>> GetParkingsByStad()
+        {
+            HttpClient client = new HttpClient();
+            string res = await client.GetStringAsync(Env.url + "stad/parkings");
+
+            Console.WriteLine(res);
+
+            return JsonConvert.DeserializeObject<List<List<Parking>>>(res);
+        }
+
+        public async Task Parkeer(int pid)
+        {
+            HttpClient client = new HttpClient();
+            string res = await client.GetStringAsync(Env.url + "parking/" + pid + "/parkeer");
+        }
+
+        public async Task Vertrek(int pid)
+        {
+            HttpClient client = new HttpClient();
+            string res = await client.GetStringAsync(Env.url + "parking/" + pid + "/vertrek");
+        }
     }
 }

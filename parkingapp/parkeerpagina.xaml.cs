@@ -15,10 +15,4 @@ public partial class ParkeerPage : ContentPage
 		BindingContext = vm = new ParkeerViewModel();
 		Console.WriteLine(vm.Parkings);
 	}
-
-	void OnButtonClicked(object sender, EventArgs args)
-	{
-		Console.WriteLine("Hello");
-		Console.WriteLine(vm.Parkings.Count);
-	}
 }

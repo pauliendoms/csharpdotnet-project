@@ -15,7 +15,8 @@
 	        StrokeThickness="2"
 	        Padding="30,20"
 	        HorizontalOptions="Center"
-            StrokeShape="RoundRectangle 15">
+            StrokeShape="RoundRectangle 15"
+            IsVisible="{Binding Show}">
 
             <VerticalStackLayout
                 WidthRequest="300"
@@ -25,12 +26,13 @@
                     Title="Parking"
                     ItemsSource="{Binding Parkings}"
                     ItemDisplayBinding="{Binding capacity}"
+                    SelectedItem="{Binding SelectedParking}"
                     HorizontalOptions="Center">
                 </Picker>
                 <Button
                     Text="Parkeer"
                     HorizontalOptions="Center"
-                    Clicked="OnButtonClicked">
+                    Command="{Binding ParkeerCommand}">
                 </Button>
             </VerticalStackLayout>
         </Border>
@@ -40,7 +42,8 @@
 	        StrokeThickness="2"
 	        Padding="30,20"
 	        HorizontalOptions="Center"
-            StrokeShape="RoundRectangle 15">
+            StrokeShape="RoundRectangle 15"
+            IsVisible="{Binding Show}">
 
             <VerticalStackLayout
                 WidthRequest="300"
