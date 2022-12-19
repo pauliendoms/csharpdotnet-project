@@ -8,5 +8,19 @@
             Text="Parkings pagina"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+
+        <ListView ItemsSource="{Binding Parkings}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <VerticalStackLayout>
+                            <Label Text="{Binding capacity}"/>
+                            <Label Text="{Binding free_spaces}"/>
+                        </VerticalStackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
     </VerticalStackLayout>
 </ContentPage>
